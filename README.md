@@ -1,14 +1,8 @@
 # elasticvue
 
-[![Build Status](https://travis-ci.org/cars10/elasticvue.svg?branch=develop)](https://travis-ci.org/cars10/elasticvue)
-[![Dependency Status](https://david-dm.org/cars10/elasticvue.svg)](https://david-dm.org/cars10/elasticvue)
-[![Chrome web store](https://img.shields.io/chrome-web-store/v/hkedbapjpblbodpgbajblpnlpenaebaa?label=chrome%20extension)](https://chrome.google.com/webstore/detail/elasticvue/hkedbapjpblbodpgbajblpnlpenaebaa)
-[![Firefox addon](https://img.shields.io/amo/v/elasticvue?label=firefox%20add-on)](https://addons.mozilla.org/en-US/firefox/addon/elasticvue/)
-[![Docker build](https://img.shields.io/docker/automated/cars10/elasticvue)](https://hub.docker.com/r/cars10/elasticvue)
+![Screenshot](https://github.com/ellingtonb/elasticvue/raw/develop/screenshot.jpg)
 
-> Elasticsearch gui for your browser [https://elasticvue.com](https://elasticvue.com)
-
-![Screenshot](https://github.com/cars10/elasticvue/raw/develop/screenshot.jpg)
+**Forked initially from** [cars10](https://github.com/cars10/elasticvue)
 
 Contents
 
@@ -53,25 +47,9 @@ Other versions might or might not work, `elasticsearch-js` will fallback to the 
 
 ### Running
 
-You can use one of the following ways to run elasticvue:
+You can build the image locally:
 
-**Browser extensions**
-
-* Chrome: Install the extension from the [chrome webstore](https://chrome.google.com/webstore/detail/elasticvue/hkedbapjpblbodpgbajblpnlpenaebaa)
-* Edge (2020): Install the extension from the [microsoft webstore](https://microsoftedge.microsoft.com/addons/detail/geifniocjfnfilcbeloeidajlfmhdlgo)
-* Firefox: Install the extension from [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/elasticvue/)
-
-Start elasticvue by clicking on the icon in your toolbar.
-
-**Docker**
-
-Use the existing image:
-
-* `docker run -p 8080:8080 -d cars10/elasticvue` [Image at Docker Hub](https://hub.docker.com/r/cars10/elasticvue) (~50mb compressed)
-
-Or build the image locally:
-
-* Checkout the repo `git clone https://github.com/cars10/elasticvue.git`
+* Checkout the repo `git clone https://github.com/ellingtonb/elasticvue.git`
 * Open the folder `cd elasticvue`
 * Build `docker build -t elasticvue .`
 * Run `docker run -p 8080:8080 elasticvue`
@@ -82,13 +60,9 @@ Or use `docker-compose`:
 
 Then open [http://localhost:8080](http://localhost:8080) in your browser.
 
-**Online version**
-
-Visit [http://app.elasticvue.com](http://app.elasticvue.com) or [https://app.elasticvue.com](https://app.elasticvue.com).
-
 **Run locally**
 
-* Checkout the repo `git clone https://github.com/cars10/elasticvue.git`
+* Checkout the repo `git clone https://github.com/ellingtonb/elasticvue.git`
 * Open the folder `cd elasticvue`
 * Install dependencies `yarn install`
 * Run a production server via `yarn prod` or dev server `yarn serve`
@@ -168,12 +142,6 @@ Development is done on chrome. Firefox, safari and edge should work but are most
 
 Before opening an issue please try to reset elasticvue to its default settings. To reset click
 `Disconnect and reset` in the footer, this will reset all your saved filters and you have to reconnect to your cluster.
-Feel free to open an [issue](https://github.com/cars10/elasticvue/issues/new/choose) if your problem persists.
-
-
-## Comparing with other frontends
-
-See the Wiki. [Comparing to other frontends](https://github.com/cars10/elasticvue/wiki/Comparing-to-other-frontends)
 
 
 ## Development
@@ -182,7 +150,7 @@ Setup and running
 
 ```bash
 # clone
-git clone https://github.com/cars10/elasticvue.git
+git clone https://github.com/ellingtonb/elasticvue.git
 cd elasticvue
 
 # install dependencies
@@ -227,19 +195,6 @@ yarn build_browser_extensions
 * document, index, snapshot repo and snapshot: add edit/delete
 * catch elasticsearch 5xx errors
 
-### Future
-
-* search manually via query dsl
-* home hover lines
-* display rest query results in table
-* cluster settings
-* data import/export
-
-### Internal stuff and refactorings
-
-* add more specs
-* refactor vuex state to use actions?
-* performance - use web workers? wasm? ~~requestIdleCallback~~?
 
 ## License
 
